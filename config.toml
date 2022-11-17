@@ -1,0 +1,16 @@
+baseURL = 'https://pibudev.com/'
+languageCode = 'en-us'
+title = 'PiBu Dev'
+theme = 'PaperMod'
+newContentEditor = 'open -b /Applications/iA Writer.app/Contents/MacOS/iA Writer'
+
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+    osEnv = ['(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM)$']
+  [security.funcs]
+    getenv = ['^HUGO_']
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
